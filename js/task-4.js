@@ -1,8 +1,7 @@
 const getTotalBalanceByGender = (users, gender) =>
   users
-    .filter((user) => user.gender === gender)
-    .map((user) => user.balance)
-    .reduce((previousValue, number) => previousValue + number);
+    .filter((users) => users.gender === gender)
+    .reduce((previousValue, { balance }) => previousValue + balance, 0);
 const allUsers = [
   {
     name: "Moore Hensley",
